@@ -44,8 +44,6 @@ export function createServer() {
     res.json({ message: ping });
   });
 
-
-
   // GoHighLevel API routes
   app.use("/api/ghl", ghlRoutes);
 

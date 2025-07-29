@@ -55,7 +55,7 @@ const quickActions = [
     icon: Users,
     label: "Contacts",
     color: "text-blue-400",
-    onClick: () => window.location.href = "/crm",
+    onClick: () => (window.location.href = "/crm"),
   },
   {
     icon: Calendar,
@@ -109,13 +109,13 @@ const rightPanelItems = [
     icon: Settings,
     label: "Config",
     active: false,
-    onClick: () => window.location.href = "/dashboard",
+    onClick: () => (window.location.href = "/dashboard"),
   },
   {
     icon: Search,
     label: "Search",
     active: false,
-    onClick: () => window.location.href = "/search",
+    onClick: () => (window.location.href = "/search"),
   },
   {
     icon: Filter,
@@ -301,14 +301,14 @@ export function WarRoom({ className }: WarRoomProps) {
       label: "My Business",
       active: false,
       color: "text-green-400",
-      onClick: () => window.location.href = "/dashboard",
+      onClick: () => (window.location.href = "/dashboard"),
     },
     {
       icon: FileText,
       label: "SaintGPT Search",
       active: false,
       color: "text-yellow-400",
-      onClick: () => window.location.href = "/search",
+      onClick: () => (window.location.href = "/search"),
     },
     {
       icon: MessageSquare,
@@ -353,7 +353,7 @@ export function WarRoom({ className }: WarRoomProps) {
       label: "PartnerTech.ai CRM",
       active: false,
       color: "text-teal-400",
-      onClick: () => window.location.href = "/crm",
+      onClick: () => (window.location.href = "/crm"),
     },
     {
       icon: Shield,
