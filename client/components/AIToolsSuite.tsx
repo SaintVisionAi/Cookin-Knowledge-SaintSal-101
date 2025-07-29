@@ -250,11 +250,17 @@ export function AIToolsSuite() {
             <Button
               variant="outline"
               size="sm"
-              onClick={() => navigate("/tools")}
+              onClick={() => {
+                if (activeTool) {
+                  setActiveTool(null);
+                } else {
+                  navigate("/");
+                }
+              }}
               className="border-[hsl(var(--gold))]/30 text-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/10"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Tools
+              {activeTool ? "Back to Suite" : "Back to Home"}
             </Button>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
