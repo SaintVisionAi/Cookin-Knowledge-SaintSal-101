@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Core Pages - Your Master Structure
+// ALL Your Existing Pages - Exact Structure
 import Splash from "./pages/Splash";
 import AppleHomepage from "./pages/AppleHomepage";
 import Why from "./pages/Why";
@@ -16,18 +16,33 @@ import Auth from "./pages/Auth";
 import GeneralDashboard from "./pages/GeneralDashboard"; // /gen
 import SaintGPT from "./pages/SaintGPT";
 import SimpleSearch from "./pages/SimpleSearch"; // /search
+import Search from "./pages/Search";
 import WarRoom from "./pages/WarRoom";
 import Institute from "./pages/Institute";
 import Broker from "./pages/Broker";
 import Help from "./pages/Help";
 import Legal from "./pages/Legal";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Index from "./pages/Index";
+import Landing from "./pages/Landing";
+import Enterprise from "./pages/Enterprise";
+import HACP from "./pages/HACP";
+import Tools from "./pages/Tools";
+import AuditService from "./pages/AuditService";
+import AuditDashboard from "./pages/AuditDashboard";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
 import NotFound from "./pages/NotFound";
 
-// Components for dedicated routes
+// Your Existing Components
 import { PartnerTech } from "./components/PartnerTech";
 import { CRM } from "./components/CRM";
 import { AIToolsSuite } from "./components/AIToolsSuite";
+import { ImageGenerator } from "./components/ImageGenerator";
+import { StickyNotes } from "./components/StickyNotes";
+import { EmailAssistant } from "./components/EmailAssistant";
+import { VideoStudio } from "./components/VideoStudio";
+import { CodeAcademy } from "./components/CodeAcademy";
 
 import { AuthProvider } from "./hooks/useAuth";
 
