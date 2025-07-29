@@ -311,7 +311,7 @@ async function searchKnowledgeBase(queryEmbedding, domain, mode, topK) {
     };
 
     if (filter) {
-      searchBody.filter = filter;
+      (searchBody as any).filter = filter;
     }
 
     const response = await fetch(
