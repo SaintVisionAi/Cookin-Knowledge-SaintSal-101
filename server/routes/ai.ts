@@ -367,7 +367,7 @@ router.get("/test", async (req, res) => {
     res.json({ success: true, response: data.choices[0].message.content });
   } catch (error) {
     console.error("Test error:", error);
-    res.json({ success: false, error: error.message });
+    res.json({ success: false, error: (error as any)?.message || "Unknown error" });
   }
 });
 
