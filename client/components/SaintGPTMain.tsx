@@ -280,7 +280,7 @@ export function SaintGPTMain({ className }: SaintGPTMainProps) {
 
                 <Button
                   size="sm"
-                  onClick={handleSend}
+                  onClick={() => handleSend()}
                   disabled={!message.trim() || isLoading}
                   className="rounded-xl bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-black"
                 >
