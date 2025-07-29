@@ -291,6 +291,15 @@ export function AIToolsSuite() {
       </div>
 
       <div className="max-w-7xl mx-auto p-6">
+        {/* Render Active Tool */}
+        {activeTool && (
+          <div className="mb-8">
+            <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
+              {renderActiveTool()}
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Package Selection */}
           <div className="lg:col-span-2 space-y-6">
