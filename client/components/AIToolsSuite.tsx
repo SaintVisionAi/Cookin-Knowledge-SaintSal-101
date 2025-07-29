@@ -208,33 +208,36 @@ export function AIToolsSuite() {
     );
   };
 
+  const [activeTool, setActiveTool] = useState<string | null>(null);
+
   const launchTool = (toolName: string) => {
-    // Route to appropriate tool based on name
+    // Launch tools within this same page
     switch (toolName) {
       case "SaintGPT Search":
       case "Advanced SaintGPT":
-        navigate("/search");
+        setActiveTool("saintgpt");
         break;
       case "Smart Sticky Notes":
       case "Basic Notes":
-        navigate("/sticky-notes");
+        setActiveTool("sticky-notes");
         break;
       case "Email Assistant":
-        navigate("/email-assistant");
+        setActiveTool("email");
         break;
       case "Image Generator":
-        navigate("/image-generator");
+        setActiveTool("image");
         break;
       case "Video Studio":
-        navigate("/video-studio");
+        setActiveTool("video");
         break;
       case "Code Assistant":
-        navigate("/code-academy");
+        setActiveTool("code");
         break;
       default:
         alert(
-          `🛠️ ${toolName}\n\nThis tool is included in your package and will be available soon!`,
+          `🛠️ ${toolName}\n\nThis tool is included in your package and launching now!`,
         );
+        setActiveTool("default");
     }
   };
 
