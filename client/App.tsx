@@ -6,38 +6,29 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import SaintGPT from "./pages/SaintGPT";
-import SimpleSearch from "./pages/SimpleSearch";
-import WarRoom from "./pages/WarRoom";
-import Tools from "./pages/Tools";
-import Legal from "./pages/Legal";
-import Why from "./pages/Why";
-import Help from "./pages/Help";
-import AuditService from "./pages/AuditService";
-import Pricing from "./pages/Pricing";
-import Landing from "./pages/Landing";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Enterprise from "./pages/Enterprise";
-import HACP from "./pages/HACP";
+
+// Core Pages - Your Master Structure
+import Splash from "./pages/Splash";
 import AppleHomepage from "./pages/AppleHomepage";
-import GeneralDashboard from "./pages/GeneralDashboard";
+import Why from "./pages/Why";
+import Pricing from "./pages/Pricing";
+import Auth from "./pages/Auth";
+import GeneralDashboard from "./pages/GeneralDashboard"; // /gen
+import SaintGPT from "./pages/SaintGPT";
+import SimpleSearch from "./pages/SimpleSearch"; // /search
+import WarRoom from "./pages/WarRoom";
 import Institute from "./pages/Institute";
 import Broker from "./pages/Broker";
-import Splash from "./pages/Splash";
-import Auth from "./pages/Auth";
-import CheckoutSuccess from "./pages/CheckoutSuccess";
-import AuditDashboard from "./pages/AuditDashboard";
+import Help from "./pages/Help";
+import Legal from "./pages/Legal";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+
+// Components for dedicated routes
 import { PartnerTech } from "./components/PartnerTech";
 import { CRM } from "./components/CRM";
-import { ImageGenerator } from "./components/ImageGenerator";
-import { StickyNotes } from "./components/StickyNotes";
-import { EmailAssistant } from "./components/EmailAssistant";
-import { VideoStudio } from "./components/VideoStudio";
-import { CodeAcademy } from "./components/CodeAcademy";
 import { AIToolsSuite } from "./components/AIToolsSuite";
+
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
