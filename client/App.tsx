@@ -24,6 +24,17 @@ import Legal from "./pages/Legal";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
+// ALL EXISTING PAGES - Preserving full functionality
+import Index from "./pages/Index";
+import Contact from "./pages/Contact";
+import Landing from "./pages/Landing";
+import Enterprise from "./pages/Enterprise";
+import HACP from "./pages/HACP";
+import Tools from "./pages/Tools";
+import AuditService from "./pages/AuditService";
+import AuditDashboard from "./pages/AuditDashboard";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
+
 // CORE COMPONENTS
 import { PartnerTech } from "./components/PartnerTech";
 import { CRM } from "./components/CRM";
