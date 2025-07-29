@@ -210,6 +210,205 @@ export function AIToolsSuite() {
 
   const [activeTool, setActiveTool] = useState<string | null>(null);
 
+  const renderActiveTool = () => {
+    switch (activeTool) {
+      case "saintgpt":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">🧠 SaintGPT AI Assistant</h3>
+            <div className="bg-black rounded-lg p-4 border border-gray-700">
+              <textarea
+                placeholder="Ask SaintGPT anything... Your AI assistant is ready to help!"
+                className="w-full h-32 bg-transparent border-none outline-none text-white placeholder-gray-400 resize-none"
+              />
+              <Button className="mt-3 bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+                <Brain className="w-4 h-4 mr-2" />
+                Ask SaintGPT
+              </Button>
+            </div>
+          </div>
+        );
+
+      case "sticky-notes":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">📝 Smart Sticky Notes</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[1, 2, 3].map(i => (
+                <div key={i} className="bg-yellow-400 text-black p-4 rounded-lg">
+                  <textarea
+                    placeholder={`Note ${i}...`}
+                    className="w-full h-24 bg-transparent border-none outline-none resize-none"
+                  />
+                </div>
+              ))}
+            </div>
+            <Button className="bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+              <FileText className="w-4 h-4 mr-2" />
+              Add New Note
+            </Button>
+          </div>
+        );
+
+      case "email":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">📧 Email Assistant</h3>
+            <div className="space-y-4">
+              <input
+                placeholder="To: recipient@example.com"
+                className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400"
+              />
+              <input
+                placeholder="Subject: Your email subject"
+                className="w-full p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400"
+              />
+              <textarea
+                placeholder="Compose your email... AI will help enhance it!"
+                className="w-full h-32 p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 resize-none"
+              />
+              <div className="flex gap-2">
+                <Button className="bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Send Email
+                </Button>
+                <Button variant="outline" className="border-[hsl(var(--gold))]/30 text-[hsl(var(--gold))]">
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  AI Enhance
+                </Button>
+              </div>
+            </div>
+          </div>
+        );
+
+      case "image":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">🎨 AI Image Generator</h3>
+            <div className="space-y-4">
+              <textarea
+                placeholder="Describe the image you want to generate... Be creative!"
+                className="w-full h-24 p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 resize-none"
+              />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                <select className="p-2 bg-black border border-gray-700 rounded text-white">
+                  <option>Style: Realistic</option>
+                  <option>Style: Artistic</option>
+                  <option>Style: Cartoon</option>
+                </select>
+                <select className="p-2 bg-black border border-gray-700 rounded text-white">
+                  <option>Size: 1024x1024</option>
+                  <option>Size: 1920x1080</option>
+                  <option>Size: 512x512</option>
+                </select>
+                <select className="p-2 bg-black border border-gray-700 rounded text-white">
+                  <option>Quality: High</option>
+                  <option>Quality: Standard</option>
+                </select>
+                <Button className="bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+                  <ImageIcon className="w-4 h-4 mr-2" />
+                  Generate
+                </Button>
+              </div>
+              <div className="bg-gray-800 rounded-lg p-8 text-center border-2 border-dashed border-gray-600">
+                <ImageIcon className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+                <p className="text-gray-400">Generated image will appear here</p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case "video":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">🎬 Video Studio</h3>
+            <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Script/Content</label>
+                  <textarea
+                    placeholder="Enter your video script or content..."
+                    className="w-full h-32 p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 resize-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Video Settings</label>
+                  <div className="space-y-2">
+                    <select className="w-full p-2 bg-black border border-gray-700 rounded text-white">
+                      <option>Format: MP4</option>
+                      <option>Format: MOV</option>
+                    </select>
+                    <select className="w-full p-2 bg-black border border-gray-700 rounded text-white">
+                      <option>Duration: 30 seconds</option>
+                      <option>Duration: 1 minute</option>
+                      <option>Duration: 2 minutes</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <Button className="bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+                <Video className="w-4 h-4 mr-2" />
+                Create Video
+              </Button>
+            </div>
+          </div>
+        );
+
+      case "code":
+        return (
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[hsl(var(--gold))] mb-4">💻 Code Assistant</h3>
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <select className="p-2 bg-black border border-gray-700 rounded text-white">
+                  <option>Language: JavaScript</option>
+                  <option>Language: Python</option>
+                  <option>Language: TypeScript</option>
+                  <option>Language: React</option>
+                </select>
+                <select className="p-2 bg-black border border-gray-700 rounded text-white">
+                  <option>Task: Generate Code</option>
+                  <option>Task: Debug Code</option>
+                  <option>Task: Optimize Code</option>
+                </select>
+              </div>
+              <textarea
+                placeholder="Describe what you want to code or paste code to debug/optimize..."
+                className="w-full h-32 p-3 bg-black border border-gray-700 rounded-lg text-white placeholder-gray-400 resize-none font-mono"
+              />
+              <div className="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-gray-400">Generated Code:</span>
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300">
+                    Copy
+                  </Button>
+                </div>
+                <pre className="text-sm text-green-400 font-mono">
+                  {`// Your AI-generated code will appear here
+function example() {
+  console.log("Hello from Code Assistant!");
+}`}
+                </pre>
+              </div>
+              <Button className="bg-[hsl(var(--gold))] text-black hover:bg-[hsl(var(--gold))]/90">
+                <Code className="w-4 h-4 mr-2" />
+                Generate Code
+              </Button>
+            </div>
+          </div>
+        );
+
+      default:
+        return (
+          <div className="text-center py-8">
+            <Sparkles className="w-16 h-16 text-[hsl(var(--gold))] mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-white mb-2">AI Tool Ready!</h3>
+            <p className="text-gray-400">This tool is being loaded...</p>
+          </div>
+        );
+    }
+  };
+
   const launchTool = (toolName: string) => {
     // Launch tools within this same page
     switch (toolName) {
