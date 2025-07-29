@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// CORE PAGES - Clean Master Structure
+// 18 CORE PAGES - Master Structure Only
 import Splash from "./pages/Splash";
 import AppleHomepage from "./pages/AppleHomepage";
 import Why from "./pages/Why";
@@ -24,26 +24,10 @@ import Legal from "./pages/Legal";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
-// ALL EXISTING PAGES - Preserving full functionality
-import Index from "./pages/Index";
-import Contact from "./pages/Contact";
-import Landing from "./pages/Landing";
-import Enterprise from "./pages/Enterprise";
-import HACP from "./pages/HACP";
-import Tools from "./pages/Tools";
-import AuditService from "./pages/AuditService";
-import AuditDashboard from "./pages/AuditDashboard";
-import CheckoutSuccess from "./pages/CheckoutSuccess";
-
-// CORE COMPONENTS
+// CORE COMPONENTS - Consolidated
 import { PartnerTech } from "./components/PartnerTech";
 import { CRM } from "./components/CRM";
 import { AIToolsSuite } from "./components/AIToolsSuite";
-import { ImageGenerator } from "./components/ImageGenerator";
-import { StickyNotes } from "./components/StickyNotes";
-import { EmailAssistant } from "./components/EmailAssistant";
-import { VideoStudio } from "./components/VideoStudio";
-import { CodeAcademy } from "./components/CodeAcademy";
 
 import { AuthProvider } from "./hooks/useAuth";
 
