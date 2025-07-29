@@ -214,7 +214,7 @@ router.post("/ingest-bulk", async (req, res) => {
       } catch (docError) {
         results.push({
           success: false,
-          error: docError.message,
+          error: (docError as any)?.message || "Processing error",
           content: doc.content.substring(0, 100) + "...",
         });
       }
