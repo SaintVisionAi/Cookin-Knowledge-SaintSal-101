@@ -17,7 +17,7 @@ export default function VoiceInterface({
   const [isSupported, setIsSupported] = useState(false);
   const { user, userTier } = useAuth();
 
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
 
   useEffect(() => {

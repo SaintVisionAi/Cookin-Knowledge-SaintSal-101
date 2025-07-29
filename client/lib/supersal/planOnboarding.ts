@@ -123,7 +123,7 @@ export function enablePlanFeatures(userTier: string) {
     enableCRMPanel: features.crm,
     enableAdminDashboard: features.webhook,
     enableWhiteLabelSetup: features.whiteLabel,
-    enableCustomOnboarding: features.onboarding,
+    enableCustomOnboarding: features.whiteLabel,
     unlimitedMessages: features.messages === "unlimited",
   };
 }
