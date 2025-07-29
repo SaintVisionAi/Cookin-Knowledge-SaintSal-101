@@ -85,6 +85,8 @@ export function PartnerTech({ className }: PartnerTechProps) {
       value: "$45K",
       status: "Hot",
       time: "2m ago",
+      email: "sarah@techcorp.com",
+      lastContact: "Today"
     },
     {
       name: "Mike Rodriguez",
@@ -92,6 +94,8 @@ export function PartnerTech({ className }: PartnerTechProps) {
       value: "$28K",
       status: "Warm",
       time: "15m ago",
+      email: "mike@startupxyz.com",
+      lastContact: "Yesterday"
     },
     {
       name: "Emily Davis",
@@ -99,6 +103,8 @@ export function PartnerTech({ className }: PartnerTechProps) {
       value: "$89K",
       status: "Hot",
       time: "1h ago",
+      email: "emily@enterprise.com",
+      lastContact: "2 days ago"
     },
     {
       name: "James Wilson",
@@ -106,6 +112,8 @@ export function PartnerTech({ className }: PartnerTechProps) {
       value: "$67K",
       status: "Cold",
       time: "2h ago",
+      email: "james@innovation.com",
+      lastContact: "1 week ago"
     },
   ];
 
