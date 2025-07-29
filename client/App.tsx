@@ -56,10 +56,10 @@ const App = () => (
       <BrowserRouter>
         <AuthProvider>
           <Routes>
-            {/* Core Master Structure - Your Exact Specifications */}
+            {/* Master Structure - Your EXACT Specifications */}
             <Route path="/splash" element={<Splash />} />
-            <Route path="/" element={<AppleHomepage />} />
             <Route path="/applehome" element={<AppleHomepage />} />
+            <Route path="/" element={<AppleHomepage />} />
             <Route path="/why" element={<Why />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/auth" element={<Auth />} />
@@ -75,6 +75,24 @@ const App = () => (
             <Route path="/legal" element={<Legal />} />
             <Route path="/ai-tools" element={<AIToolsSuite />} />
             <Route path="/about" element={<About />} />
+
+            {/* Additional existing pages */}
+            <Route path="/home" element={<Index />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/landing" element={<Landing />} />
+            <Route path="/enterprise" element={<Enterprise />} />
+            <Route path="/about/hacp" element={<HACP />} />
+            <Route path="/tools" element={<Tools />} />
+            <Route path="/audit-service" element={<AuditService />} />
+            <Route path="/audit-dashboard" element={<AuditDashboard />} />
+            <Route path="/checkout-success" element={<CheckoutSuccess />} />
+
+            {/* AI Tool Routes - Your existing components */}
+            <Route path="/image-generator" element={<ImageGenerator />} />
+            <Route path="/sticky-notes" element={<StickyNotes />} />
+            <Route path="/email-assistant" element={<EmailAssistant />} />
+            <Route path="/video-studio" element={<VideoStudio />} />
+            <Route path="/code-academy" element={<CodeAcademy />} />
 
             {/* Catch-all route */}
             <Route path="*" element={<NotFound />} />
