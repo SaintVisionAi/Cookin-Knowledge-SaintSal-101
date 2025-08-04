@@ -3,6 +3,9 @@ import express from "express";
 import cors from "cors";
 
 import ghlRoutes from "./routes/ghl";
+import ghlWebhookRoutes from "./routes/ghl-webhook";
+import clearbitRoutes from "./routes/clearbit";
+import seamlessRoutes from "./routes/seamless";
 import aiRoutes from "./routes/ai";
 import embeddingsRoutes from "./routes/embeddings";
 import auditServiceRoutes from "./routes/audit-service";
@@ -29,6 +32,9 @@ export function createServer() {
         demo: "/api/demo",
         ai: "/api/ai/*",
         ghl: "/api/ghl/*",
+        ghlWebhook: "/api/ghl-webhook",
+        clearbit: "/api/clearbit/*",
+        seamless: "/api/seamless/*",
         embeddings: "/api/embeddings/*",
         auditService: "/api/audit-service/*",
         stripe: "/api/stripe/*",
@@ -46,6 +52,13 @@ export function createServer() {
 
   // GoHighLevel API routes
   app.use("/api/ghl", ghlRoutes);
+  
+  // GHL Webhook handler for real-time CRM sync
+  app.use("/api/ghl-webhook", ghlWebhookRoutes);
+  
+  // Lead Discovery & Company Enrichment
+  app.use("/api/clearbit", clearbitRoutes);
+  app.use("/api/seamless", seamlessRoutes);
 
   // Dual AI System routes
   app.use("/api/ai", aiRoutes);
