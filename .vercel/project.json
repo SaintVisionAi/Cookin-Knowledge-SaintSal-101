@@ -1,0 +1,11 @@
+{
+  "projectId": "prj_sBFtQy8S5icJo79mNnRXPpkHnnrr",
+  "orgId": "team_hb1Un9R0dWC7UkeAi1Mg34vQH",
+  "settings": {
+    "framework": "nextjs",
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "devCommand": "npm run dev"
+  }
+}
