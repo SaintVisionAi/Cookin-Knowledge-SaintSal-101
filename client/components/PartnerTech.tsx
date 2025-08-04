@@ -37,6 +37,7 @@ import {
   Settings,
   Menu,
   X,
+  Search,
 } from "lucide-react";
 
 interface PartnerTechProps {
@@ -239,6 +240,28 @@ export function PartnerTech({ className }: PartnerTechProps) {
               </button>
 
               <div className="text-xs font-medium text-blue-200 uppercase tracking-wider mb-3 mt-6">
+                HACP Framework
+              </div>
+
+              <Link
+                to="/hacp"
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-blue-100 hover:bg-blue-400/20 transition-all"
+              >
+                <Brain className="w-5 h-5" />
+                HACP Analysis
+                <ArrowRight className="w-4 h-4 ml-auto" />
+              </Link>
+
+              <Link
+                to="/lead-discovery"
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-blue-100 hover:bg-blue-400/20 transition-all"
+              >
+                <Search className="w-5 h-5" />
+                Lead Discovery
+                <Star className="w-4 h-4 ml-auto text-[hsl(var(--gold))]" />
+              </Link>
+
+              <div className="text-xs font-medium text-blue-200 uppercase tracking-wider mb-3 mt-6">
                 WarRoom Integration
               </div>
 
@@ -257,23 +280,34 @@ export function PartnerTech({ className }: PartnerTechProps) {
               </button>
             </div>
 
-            {/* SaintSal Integration */}
+            {/* SaintSal Integration with HACP */}
             <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-[hsl(var(--gold))]/20 to-yellow-400/10 border border-[hsl(var(--gold))]/30">
               <div className="flex items-center gap-3 mb-3">
                 <Star className="w-5 h-5 text-[hsl(var(--gold))]" />
                 <span className="text-sm font-medium text-white">
-                  SaintSal™ CRM
+                  SaintSal™ CRM + HACP
                 </span>
               </div>
               <p className="text-xs text-blue-200 mb-3">
-                AI-powered lead scoring and conversation analysis
+                AI-powered lead scoring with behavioral analysis framework
               </p>
-              <Button
-                size="sm"
-                className="w-full bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-black font-medium"
-              >
-                Activate AI
-              </Button>
+              <div className="space-y-2">
+                <Button
+                  size="sm"
+                  className="w-full bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-black font-medium"
+                  onClick={() => window.open('/hacp', '_blank')}
+                >
+                  Activate HACP AI
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full border-[hsl(var(--gold))] text-[hsl(var(--gold))]"
+                  onClick={() => window.open('/lead-discovery', '_blank')}
+                >
+                  Seamless Fork Discovery
+                </Button>
+              </div>
             </div>
           </div>
 

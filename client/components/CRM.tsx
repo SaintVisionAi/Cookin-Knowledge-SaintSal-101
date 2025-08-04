@@ -177,21 +177,32 @@ export function CRM({ className }: CRMProps) {
               </button>
             </div>
 
-            {/* SaintSal Integration */}
+            {/* SaintSal Integration with HACP */}
             <div className="mt-6 p-3 rounded-lg bg-gradient-to-r from-[hsl(var(--gold))]/20 to-yellow-400/10 border border-[hsl(var(--gold))]/30">
               <div className="flex items-center gap-2 mb-2">
                 <Zap className="w-4 h-4 text-[hsl(var(--gold))]" />
                 <span className="text-xs font-medium text-white">
-                  SaintSal™ AI
+                  SaintSal™ AI + HACP
                 </span>
               </div>
-              <p className="text-xs text-gray-300 mb-2">Smart CRM automation</p>
-              <Button
-                size="sm"
-                className="w-full h-7 bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-black font-medium text-xs"
-              >
-                Activate
-              </Button>
+              <p className="text-xs text-gray-300 mb-2">Smart CRM automation with behavioral analysis</p>
+              <div className="space-y-2">
+                <Button
+                  size="sm"
+                  className="w-full h-7 bg-[hsl(var(--gold))] hover:bg-[hsl(var(--gold))]/90 text-black font-medium text-xs"
+                  onClick={() => window.open('/hacp', '_blank')}
+                >
+                  HACP Framework
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full h-7 text-xs border-[hsl(var(--gold))] text-[hsl(var(--gold))]"
+                  onClick={() => window.open('/lead-discovery', '_blank')}
+                >
+                  Lead Discovery
+                </Button>
+              </div>
             </div>
           </div>
 
