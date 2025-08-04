@@ -126,6 +126,15 @@ export function CRM({ className }: CRMProps) {
                 <ArrowRight className="w-3 h-3 ml-auto" />
               </Link>
 
+              <Link
+                to="/analytics"
+                className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-white hover:bg-white/10 transition-all text-sm"
+              >
+                <Activity className="w-4 h-4" />
+                Analytics
+                <Crown className="w-3 h-3 ml-auto text-[hsl(var(--gold))]" />
+              </Link>
+
               <div className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2 mt-4">
                 CRM Tools
               </div>

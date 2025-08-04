@@ -31,6 +31,7 @@ import {
   CheckCircle,
   XCircle,
   AlertCircle,
+  Gift,
   Star,
   Mail,
   Globe,
@@ -259,6 +260,24 @@ export function PartnerTech({ className }: PartnerTechProps) {
                 <Search className="w-5 h-5" />
                 Lead Discovery
                 <Star className="w-4 h-4 ml-auto text-[hsl(var(--gold))]" />
+              </Link>
+
+              <Link
+                to="/referral-bot"
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-blue-100 hover:bg-blue-400/20 transition-all"
+              >
+                <Gift className="w-5 h-5" />
+                Referral Bot
+                <Star className="w-4 h-4 ml-auto text-[hsl(var(--gold))]" />
+              </Link>
+
+              <Link
+                to="/analytics"
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-blue-100 hover:bg-blue-400/20 transition-all"
+              >
+                <BarChart3 className="w-5 h-5" />
+                Analytics
+                <Crown className="w-4 h-4 ml-auto text-[hsl(var(--gold))]" />
               </Link>
 
               <div className="text-xs font-medium text-blue-200 uppercase tracking-wider mb-3 mt-6">
