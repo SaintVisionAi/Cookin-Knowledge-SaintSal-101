@@ -28,6 +28,10 @@ import NotFound from "./pages/NotFound";
 import { PartnerTech } from "./components/PartnerTech";
 import { CRM } from "./components/CRM";
 import { AIToolsSuite } from "./components/AIToolsSuite";
+import { LeadDiscovery } from "./components/LeadDiscovery";
+import { HACPIntegration } from "./components/HACPIntegration";
+import { ReferralBot } from "./components/ReferralBot";
+import { AnalyticsDashboard } from "./components/AnalyticsDashboard";
 
 import { AuthProvider } from "./hooks/useAuth";
 
@@ -54,6 +58,10 @@ const App = () => (
             <Route path="/warroom" element={<WarRoom />} />
             <Route path="/partnertech" element={<PartnerTech />} />
             <Route path="/crm" element={<CRM />} />
+            <Route path="/lead-discovery" element={<LeadDiscovery />} />
+            <Route path="/hacp" element={<HACPIntegration />} />
+            <Route path="/referral-bot" element={<ReferralBot />} />
+            <Route path="/analytics" element={<AnalyticsDashboard />} />
             <Route path="/institute" element={<Institute />} />
             <Route path="/broker" element={<Broker />} />
             <Route path="/help" element={<Help />} />
